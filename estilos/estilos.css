@@ -1,18 +1,13 @@
-/*
-REGLAS =>  es el congunto de un selector con su propieda y valores declarado
+/*REGLAS =>  es el congunto de un selector con su propieda y valores declarado
 SELECTORES => para indentificar el elementos de html al que le queremos dar estilo
 VALORES  => son valores que esperan recibir las propiedas como valiabres 
 DECLARACIONES => donde declaramos las propiedades y sus valores
-PROPIEDADES => son las particularidades que hacemos con ese elemento
-*/
+PROPIEDADES => son las particularidades que hacemos con ese elemento*/
 
-/* 
- SELECTOR DE ETIQUETAS: header - sectio - article - nav 
+/* SELECTOR DE ETIQUETAS: header - sectio - article - nav 
  SELECTOR POR DESCENDENCIA: body header div nav ol li a {} 
  SELECTOR DE CLASE: punto + nombre de la clase 
- SELECTOR POR IDENTIFICACION: #nombreDelId 
- */
-
+ SELECTOR POR IDENTIFICACION: #nombreDelId */
 
 /*.header {
   background: pink;
@@ -22,8 +17,6 @@ PROPIEDADES => son las particularidades que hacemos con ese elemento
 /* grisoscuro = #1d252c */
 /* gris clarooooo = #626262 */
 /* background gris = #1b2127 */
-
-
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -66,6 +59,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .hero-imgage{
   object-fit: cover;
@@ -86,6 +80,7 @@ background: white;
 display:flex;
 align-items: center;
 justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .project-presentation,
@@ -109,26 +104,22 @@ font-size: 20px;
 }
 
 .project-details{
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer{
-  display: inline-block;
-  width: 500px;
-}
-
-.exp{
-  border: 1px solid gray;
-
+  max-width: 100%;
+  
 }
 
 .header {
-  background-color:#1da591;
+  background-color:#1b2127;
   color: white;
   display: flex;
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ol,
@@ -232,6 +223,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -281,7 +273,9 @@ figure {
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
+/*width: 100%;*/
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -304,6 +298,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer img {
   vertical-align: middle;
@@ -311,3 +306,50 @@ figure {
 .footer a {
   color:white;
 }
+
+/* desktop first que empieces desde el MQ mas grande*/
+
+@media screen and (max-width:1024px){
+
+}
+
+@media screen and (max-width: 777px){
+  .header {
+   display: block;
+   height: auto; 
+  }
+  .header ol {
+    display: initial;
+  }
+  .header ol li {
+    height: 50px;
+  }
+  .header a{
+    justify-content: center;
+  }
+  .header a{
+    justify-content: center;
+  }
+  .header .logo{
+    text-align: center;
+  }
+  .project{
+    display: block;
+}
+.project-imageContainer{
+  width:auto;
+  text-align: center;
+}
+.project-details{
+  width: auto;
+}
+}
+
+@media screen and (max-width:480px){
+  
+}
+
+@media screen and (max-width:320px){
+
+}
+
