@@ -17,6 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
       </head>
     <body>
+      <i class="icon-menu burger-button" id="burger-menu"></i>
       <header  class="header">
         <div class="container">
           <figure class="logo">
@@ -37,14 +38,14 @@
           </nav>
         </div>          
       </header>
-       <!-- <section class="hero">
+       <section class="hero">
           <div class="container">
             <h1>
             Hola! Soy <strong>Leonardo Tulian</strong> <br/> Desarrollador <strong>Javascrip</strong> con<br/>pasion por la <strong>tecnologia</strong>
             </h1>
             <img class="hero-image" src="Images/hero.png" width="500" height="300" alt="imagen principañ deñ sitio">
           </div>
-        </section>-->        
+        </section>
       <section id="portafolio" class="portfolio">
         <div class="container">
           <h2>Bienvenido (Presentacion)</h2>
@@ -57,7 +58,8 @@
               <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam, culpa quo est recusandae cupiditate ratione quidem laudantium dignissimos illo minus esse iusto, ab veritatis. Repellat, possimus! Labore, necessitatibus molestias.</p>
             </div>
             <figure class="project-imageContainer">
-                <img class="project-image" src="Images/presentacion.png" width="500" alt="Imagen del Video">
+              <video class="html-video" src="videos/f8.mp4" width="1280" height="720" controls></video>
+               <!--<img class="project-image" src="Images/presentacion.png" width="500" alt="Imagen del Video">-->
             </figure>                
           </article>
           <article class="project">
@@ -73,11 +75,10 @@
             </figure>                
           </article>
         </div>       
-      </section>
+      </section>     
       <div class="container">
       <h2 class="experience-list-title">Mas sobre mi experiencia academica</h2>
       </div>
-
      <section id="experiencia" class="experience-list">
         <div class="container">
           <article class="experience">
@@ -103,8 +104,8 @@
         </div> 
         <div class="container">       
         <article class="experience">
-          <figure class="experience-imageContainer">
-            <img class="experience-image" src="Images/PL-SQL.png" width="500"  alt="Imagen que ilustra mi Experiencia"/>
+          <figure class="experience-imageContainer">            
+           <img class="experience-image" src="Images/PL-SQL.png" width="500"  alt="Imagen que ilustra mi Experiencia"/>
           </figure>
           <div class="experience-details">
             <h3 class="experience-title">Experiencia Academica</h3>
@@ -114,7 +115,10 @@
         </article>
         <article class="experience">
           <figure class="experience-imageContainer">
-            <img class="experience-image" src="Images/PL-SQL.png" width="500"  alt="Imagen que ilustra mi Experiencia"/>
+            <div class="flexible-video">
+              <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/JwGnCIsLOpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+           <!--<img class="experience-image" src="Images/PL-SQL.png" width="500"  alt="Imagen que ilustra mi Experiencia"/>-->
           </figure>
           <div class="experience-details">
             <h3 class="experience-title">Experiencia Academica</h3>
@@ -124,7 +128,7 @@
         </article>
       </div>     
       </section>
-     <!--<section id="contacto" class="contact">
+     <section id="contacto" class="contact">
         <div class="container">
           <form class="form-email" action="/suscripcion/">
             <h3>¿Creamos algo Juntos?</h3>
@@ -138,18 +142,36 @@
             <a href="https://www.instagram.com/tulianleoeze/" class="social-link instagram"></a>
           </div>
         </div>
-      </section>-->
-     <!-- <footer class="footer">
+      </section>
+     <footer class="footer">
         <div class="container">
           <div>
             <p>Derechos reservados de: <img src="images/footer.png" width="120" alt="leonardo Tulian" </p>
           </div>
           <div>
             <p>
-              Designed with <\3 by <a href="https://twitter.com/EzeTulian">@EzeTulian</a> 
+              Designed with ❤️ by <a href="https://twitter.com/EzeTulian">@EzeTulian</a> 
             </p>
           </div>
         </div>
-      </footer>-->
+      </footer>
+      <script>
+        console.log('Hola mundo es mi primer linea en JS');
+
+        const menu = document.querySelector('.menu');
+        console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu')
+        console.log(burgerButton);        
+
+        burgerButton.addEventListener('click',hideShow);
+
+        function hideShow() {
+          if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+          }else{
+          menu.classList.add('is-active');            
+          }
+        }
+      </script>
     </body>
 </html>
